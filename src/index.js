@@ -28,7 +28,7 @@ function getBreeds() {
 
 function updateBreed(breedList){
     let ul = document.getElementById('dog-breeds');
-    removeChildren(ul);
+    removeBreeds(ul);
     breedList.forEach(breed => {
         const li = document.createElement('li');
         li.innerHTML = breed;
@@ -36,7 +36,7 @@ function updateBreed(breedList){
         ul.appendChild(li);})   
 }
 
-function removeChildren(element) {
+function removeBreeds(element) {
     let child = element.lastElementChild;
     while (child) {
       element.removeChild(child);
